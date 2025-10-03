@@ -1,17 +1,21 @@
 import React from "react";
-import "./Footer.css";
 
-function Footer() {
+const Footer = () => {
   return (
-    <nav className="footer">
-      <div className="logo">RM-HC</div>
-      <ul className="footer-links">
-        <li>
-          <p>&copy; 2025 My Portfolio. All Rights Reserved.</p>
-        </li>
-      </ul>
-    </nav>
+    <div class="card text-center ">
+      <div class="card-header text-light bg-dark">Featured</div>
+      <div class="card-body text-light bg-secondary">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">
+          With supporting text below as a natural lead-in to additional content.
+        </p>
+        <a href="#" class="btn btn-success">
+          Go To GitHub
+        </a>
+      </div>
+      <div class="card-footer text-light bg-dark">&copy; 2025 RMHC</div>
+    </div>
   );
-}
+};
 
 export default Footer;
