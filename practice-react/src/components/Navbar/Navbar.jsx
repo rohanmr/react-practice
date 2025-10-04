@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light ">
+    <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light ">
       <div className="container px-5">
         <a className="navbar-brand fw-bold" href="#">
           RMHC
