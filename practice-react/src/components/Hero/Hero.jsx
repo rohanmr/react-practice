@@ -6,36 +6,40 @@ const Hero = () => {
   return (
     <>
       <div
-        className="container-fluid mt-2 p-0 position-relative"
+        className="container-fluid mt-5 p-0 position-relative overflow-hidden   "
         style={{
-          backgroundImage: `url(${heroImg})`,
+          // backgroundImage: `url(${heroImg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          height: "100vh",
+          height: "700px",
+          width: "100%",
         }}
       >
-        <div className="row align-items-center h-100  p-4">
+        <div className="row align-items-center h-75 ms-md-5 p-2 p-md-4">
           <div className="col-12 col-md-6 text-center text-md-start">
-            <h1 className="display-3">
-              Hi ✋ I'm <span className="text-primary fw-bolder">Rohan</span>
-            </h1>
-            <h3 className="fs-1 fw-bolder">MERN Stack Developer</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laudantium non doloremque debitis! Tenetur qui eos repudiandae.
-            </p>
+            <div className="mt-5">
+              <h1 className="display-md-3">
+                Hi ✋ I'm <span className="text-primary fw-bold">Rohan</span>
+              </h1>
+              <h3 className="fs-md-1 fw-bolder">MERN Stack Developer</h3>
+              <p className="w-md-75">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam
+                eveniet harum debitis provident quas labore soluta corrupti
+                voluptatem illum exercitationem sit recusandae deserunt
+              </p>
+            </div>
             <button className="btn btn-outline-primary fw-bold me-2">
               Let's Talk
             </button>
             <button className="btn btn-outline-dark fw-bold">Learn More</button>
           </div>
 
-          <div className="col-12 col-md-6 text-center">
+          <div className="col-12 col-md-6 text-center mt-4">
             <img
               src={userImg}
               alt="user"
               className="img-fluid rounded-circle shadow-lg"
-              style={{ maxHeight: "400px" }}
+              style={{ maxHeight: "350px" }}
             />
           </div>
         </div>
