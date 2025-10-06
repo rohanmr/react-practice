@@ -7,9 +7,9 @@ function Navbar() {
   return (
     <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-dark ">
       <div className="container px-5">
-        <a className="navbar-brand fw-bold" href="#">
+        <Link className="navbar-brand fw-bold" to="/">
           <img src={logo} alt="logo" width={150} />
-        </a>
+        </Link>
         <button
           className="navbar-toggler bg-light"
           type="button"
@@ -27,27 +27,27 @@ function Navbar() {
           id="navbarNav"
         >
           <ul className="navbar-nav gap-2 fw-semibold ">
-            <li className="nav-item ">
+            <li className="nav-item navlink">
               <Link className="nav-link text-light" aria-current="page" to="/">
                 Home
               </Link>
             </li>
-            <li className="nav-item ">
+            <li className="nav-item navlink">
               <Link className="nav-link text-light" to="/skills">
                 Skils
               </Link>
             </li>
-            <li className="nav-item ">
+            <li className="nav-item navlink">
               <Link className="nav-link text-light" to="/projects">
                 Projects
               </Link>
             </li>
-            <li className="nav-item ">
+            <li className="nav-item navlink">
               <Link className="nav-link text-light" to="/about-us">
                 About Us
               </Link>
             </li>
-            <li className="nav-item ">
+            <li className="nav-item navlink">
               <Link className="nav-link text-light" to="/contact-us">
                 Contact Us
               </Link>

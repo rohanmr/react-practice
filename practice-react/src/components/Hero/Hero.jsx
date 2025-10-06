@@ -8,9 +8,6 @@ const Hero = () => {
       <div
         className="container-fluid mt-5 p-0 position-relative overflow-hidden   "
         style={{
-          // backgroundImage: `url(${heroImg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
           height: "700px",
           width: "100%",
         }}

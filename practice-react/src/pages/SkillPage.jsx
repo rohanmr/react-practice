@@ -1,7 +1,12 @@
 import React from "react";
+import Skills from "../components/Skills/Skills";
 
 const SkillPage = () => {
-  return <div>Skill Page</div>;
+  return (
+    <>
+      <Skills />
+    </>
+  );
 };
 
 export default SkillPage;
