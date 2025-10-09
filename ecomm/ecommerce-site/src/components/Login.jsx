@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handelLogin = (event) => {
+    event.preventDefault();
+    const auth = { email: email, password: password };
+    console.log(auth);
+    setEmail("");
+    setPassword("");
+  };
+
   return (
     <div className="d-flex justify-content-center align-items-center  bg-light">
       <div
@@ -10,7 +21,7 @@ const Login = () => {
       >
         <h3 className="text-center mb-4 fw-bold text-primary">Login</h3>
 
-        <form>
+        <form onSubmit={handelLogin}>
           <div className="mb-3">
             <label htmlFor="email" className="form-label fw-semibold">
               Email address
@@ -19,6 +30,8 @@ const Login = () => {
               type="email"
               className="form-control"
               id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
               required
             />
@@ -32,6 +45,8 @@ const Login = () => {
               type="password"
               className="form-control"
               id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               placeholder="Enter your password"
               required
             />

@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Register = () => {
+  const [username, setUsername] = useState("");
   return (
     <div className="d-flex justify-content-center align-items-center  bg-light">
       <div
