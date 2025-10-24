@@ -3,6 +3,27 @@ import { Link } from "react-router-dom";
 
 const Register = () => {
   const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setconfirmPassword] = useState("");
+
+  const handelSubmit = (e) => {
+    e.preventDefault();
+    const auth = {
+      username: username,
+      email: email,
+      password: password,
+      confirmPassword: confirmPassword,
+    };
+
+    console.log(auth, " form the register component");
+
+    setUsername("");
+    setEmail("");
+    setPassword("");
+    setconfirmPassword("");
+  };
+
   return (
     <div className="d-flex justify-content-center align-items-center  bg-light">
       <div
@@ -13,7 +34,7 @@ const Register = () => {
           Create Account
         </h3>
 
-        <form>
+        <form onSubmit={handelSubmit}>
           <div className="mb-3">
             <label htmlFor="name" className="form-label fw-semibold">
               Full Name
@@ -22,6 +43,8 @@ const Register = () => {
               type="text"
               className="form-control"
               id="name"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
               placeholder="Enter your full name"
               required
             />
@@ -35,6 +58,8 @@ const Register = () => {
               type="email"
               className="form-control"
               id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
               required
             />
@@ -48,6 +73,8 @@ const Register = () => {
               type="password"
               className="form-control"
               id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               placeholder="Create a password"
               required
             />
@@ -61,6 +88,8 @@ const Register = () => {
               type="password"
               className="form-control"
               id="confirmPassword"
+              value={confirmPassword}
+              onChange={(e) => setconfirmPassword(e.target.value)}
               placeholder="Re-enter your password"
               required
             />

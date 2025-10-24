@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
-      <nav class="navbar navbar-expand-lg navbar-light bg-dark top-0 sticky-top">
-        <div class="container-fluid d-flex justify-content-between  ">
-          <Link class="navbar-brand  text-light texttitle ms-3" to="/">
+      <nav className="navbar navbar-expand-lg navbar-light bg-dark top-0 sticky-top">
+        <div className="container-fluid d-flex justify-content-between  ">
+          <Link className="navbar-brand  text-light texttitle ms-3" to="/">
             EcomExpress
           </Link>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNavDropdown"
@@ -18,48 +18,48 @@ const Navbar = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
 
           <div
-            class="collapse navbar-collapse justify-content-end my-2 px-4"
+            className="collapse navbar-collapse justify-content-end my-2 px-4"
             id="navbarNavDropdown"
           >
-            <ul class="navbar-nav ">
-              <li class="nav-item">
-                <Link class="nav-link active  text-light" to="/">
+            <ul className="navbar-nav ">
+              <li className="nav-item">
+                <Link className="nav-link active  text-light" to="/">
                   Home
                 </Link>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <Link
-                  class="nav-link  text-light "
+                  className="nav-link  text-light "
                   aria-current="page"
                   to="/add-product"
                 >
                   Add Product
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link class="nav-link  text-light" to="/features">
-                  Features
+              <li className="nav-item">
+                <Link className="nav-link  text-light" to="/travles">
+                  Travles
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link class="nav-link  text-light" to="/product">
+              <li className="nav-item">
+                <Link className="nav-link  text-light" to="/product">
                   Products
                 </Link>
               </li>
-              <li class="nav-item  text-light">
-                <Link class="nav-link position-relative " to="/cart">
-                  <i class="bi bi-cart text-light"></i>
-                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                    0<span class="visually-hidden">unread messages</span>
+              <li className="nav-item  text-light">
+                <Link className="nav-link position-relative " to="/cart">
+                  <i className="bi bi-cart text-light"></i>
+                  <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    0<span className="visually-hidden">unread messages</span>
                   </span>
                 </Link>
               </li>
-              <li class="nav-item ">
-                <Link class="nav-link  text-light" to="/login">
+              <li className="nav-item ">
+                <Link className="nav-link  text-light" to="/login">
                   Login
                 </Link>
               </li>
