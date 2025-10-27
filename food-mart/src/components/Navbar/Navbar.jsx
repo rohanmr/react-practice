@@ -47,7 +47,7 @@ export default function Navbar() {
           <div className="relative">
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="flex items-center text-sm text-gray-700 font-medium mr-2 focus:outline-none"
+              className="flex items-center text-sm text-gray-700 font-medium mr-2 focus:outline-none cursor-pointer"
             >
               All Categories
               <FiChevronDown className="ml-1" />
@@ -81,7 +81,7 @@ export default function Navbar() {
         <div className="flex items-center space-x-4 sm:space-x-5">
           <div className="hidden sm:block text-right">
             <p className="text-xs text-gray-500">For Support?</p>
-            <p className="text-sm font-semibold text-black">+980-34984089</p>
+            <p className="text-sm font-semibold text-black">+91 9022467707</p>
           </div>
 
           <div className="bg-gray-100 p-1.5 rounded-full">

@@ -1,17 +1,17 @@
-import { useState } from "react";
-
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <Navbar />
-      <div class="text-2xl text-red-700 mt-5 p-8  font-bold underline">
-        Home Page
-      </div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+      </Router>
     </>
   );
 }
