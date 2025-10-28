@@ -26,7 +26,7 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="w-full shadow-sm border-b bg-white">
+    <header className="w-full shadow-sm bg-white sticky top-0 z-50">
       {/* Top Section */}
       <div className="flex items-center justify-between px-4 sm:px-6 py-3">
         {/* Left: Logo */}
@@ -111,7 +111,7 @@ export default function Navbar() {
       </div>
 
       {/* Bottom Menu (hidden on mobile) */}
-      <nav className="hidden lg:flex items-center space-x-8 px-6 py-3 border-t text-sm text-gray-700">
+      <nav className="hidden lg:flex items-center space-x-8 px-6 py-3 border-t border-gray-200 text-sm text-gray-700">
         <div className="relative">
           <button
             onClick={() => setIsShopByDropdownOpen(!isShopByDropdownOpen)}
