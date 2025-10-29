@@ -6,6 +6,8 @@ import {
   FiChevronDown,
   FiMenu,
   FiX,
+  FiShoppingBag,
+  FiShoppingCart,
 } from "react-icons/fi";
 import { GiFruitBowl } from "react-icons/gi";
 import { Link } from "react-router-dom";
@@ -96,8 +98,9 @@ export default function Navbar() {
           </div>
 
           <div className="hidden sm:block text-right">
-            <p className="text-xs text-gray-500">Your Cart</p>
-            <p className="text-sm font-semibold text-black">$1290.00</p>
+            <FiShoppingCart className="w-5 h-5 text-gray-700 cursor-pointer" />
+            {/* <p className="text-xs text-gray-500">Your Cart</p>
+            <p className="text-sm font-semibold text-black">$1290.00</p> */}
           </div>
 
           {/* Mobile Menu Toggle */}
