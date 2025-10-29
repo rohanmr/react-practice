@@ -1,8 +1,8 @@
 import React from "react";
 import { FiHeart, FiStar, FiMinus, FiPlus } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
-  console.log(product);
   return (
     <div className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 w-full max-w-[230px] sm:max-w-[250px] mx-auto p-4 relative">
       {/* Discount badge */}
@@ -28,7 +28,7 @@ const ProductCard = ({ product }) => {
 
       {/* Product Info */}
       <h3 className="text-sm font-semibold text-gray-800 line-clamp-1">
-        {product.name}
+        <Link to={`/product-details/${product.id}`}>{product.name}</Link>
       </h3>
       <div className="text-xs text-gray-500 mt-1">
         {product.unit}{" "}

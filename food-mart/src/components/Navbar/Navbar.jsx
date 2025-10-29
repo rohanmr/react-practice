@@ -8,6 +8,7 @@ import {
   FiX,
 } from "react-icons/fi";
 import { GiFruitBowl } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const navList = [
@@ -32,14 +33,17 @@ export default function Navbar() {
         {/* Left: Logo */}
         <div className="flex items-center space-x-2">
           <GiFruitBowl className="w-8 h-8 sm:w-10 sm:h-10 text-[#F7A600]" />
-          <div>
-            <h1 className="text-lg sm:text-xl font-bold text-[#F7A600]">
-              FOODMART
-            </h1>
-            <p className="text-[10px] sm:text-xs text-gray-500 tracking-wide">
-              GROCERY STORE
-            </p>
-          </div>
+
+          <Link to="/">
+            <div>
+              <h1 className="text-lg sm:text-xl font-bold text-[#F7A600]">
+                FOODMART
+              </h1>
+              <p className="text-[10px] sm:text-xs text-gray-500 tracking-wide">
+                GROCERY STORE
+              </p>
+            </div>
+          </Link>
         </div>
 
         {/* Search Bar (hidden on mobile) */}

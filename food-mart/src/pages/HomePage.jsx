@@ -6,6 +6,7 @@ import ProductCard from "../components/ProductCard/ProductCard";
 
 const HomePage = () => {
   const [product, setProduct] = useState([]);
+
   useEffect(() => {
     setProduct(products);
   }, []);
