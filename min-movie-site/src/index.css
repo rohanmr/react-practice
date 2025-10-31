@@ -1,0 +1,12 @@
+body {
+    /* background-color: black !important; */
+    color: red !important;
+}
+
+.truncate-single-line {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 250px;
+    /* Or any fixed width */
+}
