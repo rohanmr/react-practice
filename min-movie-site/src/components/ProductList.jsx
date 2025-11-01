@@ -31,8 +31,8 @@ const ProductList = () => {
                     <p className="card-text text-muted truncate-single-line">
                       {p.description}
                     </p>
-                    <button className="btn btn-primary btn-sm">
-                      View Details
+                    <button className="btn btn-outline-success btn-sm">
+                      Add To Cart
                     </button>
                   </div>
                 </div>

@@ -13,7 +13,6 @@ const Navbar = () => {
       } bg-${theme} shadow-sm py-3`}
     >
       <div className="container-fluid px-4">
-        {/* Logo / Brand */}
         <Link className="navbar-brand fw-bold fs-3 text-warning" to="/">
           🎥 MoviesHUB
         </Link>
