@@ -23,7 +23,7 @@ const Comments = () => {
   };
 
   return (
-    <div className="container my-5">
+    <div className="container mt-2">
       <div
         className="p-4 mx-auto rounded-4 shadow-lg bg-light"
         style={{ maxWidth: "500px" }}
