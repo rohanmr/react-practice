@@ -6,6 +6,7 @@ import MovieDetails from "./pages/MovieDetails";
 import Likes from "./pages/Likes";
 import { BrowserRouter } from "react-router-dom";
 import Comments from "./pages/Comments";
+import CaetPage from "./pages/CartPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Movies />} />
+          <Route path="/cart" element={<CaetPage />} />
           <Route path="/movie/:movieID" element={<MovieDetails />}>
             <Route path="likes" element={<Likes />} />
             <Route path="comments" element={<Comments />} />

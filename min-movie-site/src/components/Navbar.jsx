@@ -1,14 +1,16 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import ThemeContext from "../context/ThemeContext";
+import CartContext from "../context/CartContext";
 
 const Navbar = () => {
   const { theme, toggelTheme } = useContext(ThemeContext);
   const isDark = theme === "dark";
+  const { cartLength } = useContext(CartContext);
 
   return (
     <nav
-      className={`navbar navbar-expand-lg navbar-${
+      className={`navbar sticky-top navbar-expand-lg navbar-${
         isDark ? "dark" : "light"
       } bg-${theme} shadow-sm py-3`}
     >
@@ -61,6 +63,19 @@ const Navbar = () => {
                 }`}
               >
                 Songs
+              </Link>
+            </li>
+            <li className="nav-item fs-4">
+              <Link
+                to="/cart"
+                className={`nav-link fw-semibold ${
+                  isDark ? "text-light" : "text-dark"
+                }`}
+              >
+                🛒
+                <sup className="bg-warning px-2 rounded-circle text-black">
+                  {cartLength}
+                </sup>
               </Link>
             </li>
 

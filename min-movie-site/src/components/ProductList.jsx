@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import useCustomAPI from "../hooks/useCustomeAPi";
+import CartContext from "../context/CartContext";
 
 const ProductList = () => {
   const { products, loading, error } = useCustomAPI(
@@ -9,6 +10,8 @@ const ProductList = () => {
   if (loading) return <div className="spinner-border" role="status"></div>;
   if (error)
     return <div>Erorr While Getting Products......{error.message}</div>;
+
+  const { addToCart, cartLength } = useContext(CartContext);
 
   return (
     <>
@@ -31,7 +34,10 @@ const ProductList = () => {
                     <p className="card-text text-muted truncate-single-line">
                       {p.description}
                     </p>
-                    <button className="btn btn-outline-success btn-sm">
+                    <button
+                      className="btn btn-outline-success btn-sm"
+                      onClick={() => addToCart(p)}
+                    >
                       Add To Cart
                     </button>
                   </div>
