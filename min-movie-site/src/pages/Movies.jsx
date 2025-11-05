@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import ProductList from "../components/ProductList";
 import ThemeContext from "../context/ThemeContext";
 import { Link } from "react-router-dom";
+import Counter from "../components/Counter";
 
 const Movies = () => {
   const { theme } = useContext(ThemeContext);
@@ -36,6 +37,7 @@ const Movies = () => {
   ];
   return (
     <div className={`container-fluid bg-${theme} py-4`}>
+      <Counter />
       <h1 className="fw-bold text-center mb-4">Movies </h1>
 
       {/* Movies Grid */}

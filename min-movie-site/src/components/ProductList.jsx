@@ -6,12 +6,11 @@ const ProductList = () => {
   const { products, loading, error } = useCustomAPI(
     "https://fakestoreapi.com/products"
   );
+  const { addToCart } = useContext(CartContext);
 
   if (loading) return <div className="spinner-border" role="status"></div>;
   if (error)
     return <div>Erorr While Getting Products......{error.message}</div>;
-
-  const { addToCart, cartLength } = useContext(CartContext);
 
   return (
     <>
