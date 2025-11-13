@@ -47,12 +47,12 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <Link
-                to="/movies"
+                to="/todo"
                 className={`nav-link fw-semibold ${
                   isDark ? "text-light" : "text-dark"
                 }`}
               >
-                All Movies
+                ToDo App
               </Link>
             </li>
             <li className="nav-item">

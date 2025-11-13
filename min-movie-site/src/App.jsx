@@ -7,6 +7,7 @@ import Likes from "./pages/Likes";
 import { BrowserRouter } from "react-router-dom";
 import Comments from "./pages/Comments";
 import CaetPage from "./pages/CartPage";
+import TaskManager from "./components/TaskManager";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Movies />} />
+          <Route path="/todo" element={<TaskManager />} />
           <Route path="/cart" element={<CaetPage />} />
           <Route path="/movie/:movieID" element={<MovieDetails />}>
             <Route path="likes" element={<Likes />} />
