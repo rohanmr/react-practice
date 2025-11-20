@@ -1,5 +1,6 @@
 const express = require("express")
 require('dotenv').config()
+const taskRoute = require("./routes/taskRoute")
 
 
 const app = express()
@@ -10,20 +11,21 @@ app.use("/web", express.static("public"))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
+app.use("/tasks", taskRoute)
 
-app.get("/", (req, res) => {
-    res.send("Hello From Server")
-})
+// app.get("/", (req, res) => {
+//     res.send("Hello From Server")
+// })
 
-app.get("/home", (req, res) => {
-    res.send("<h1>Hello From Express JS </h1>")
-})
+// app.get("/home", (req, res) => {
+//     res.send("<h1>Hello From Express JS </h1>")
+// })
 
-app.post("/contact", (req, res) => {
-    console.log(req.body, "From Server")
-    res.send("Contact Added Succesfully")
+// app.post("/contact", (req, res) => {
+//     console.log(req.body, "From Server")
+//     res.send("Contact Added Succesfully")
 
-})
+// })
 
 
 
