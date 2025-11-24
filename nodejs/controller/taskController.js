@@ -33,5 +33,16 @@ const getAllTask = (req, res) => {
     }
 }
 
+const getTaskById = (req, res) => {
+    try {
+        const id = req.params.ID
+        const task = tasks.find((t) => id == t.id)
 
-module.exports = { createTask, getAllTask }
+        res.status(200).send({ task: task, })
+    } catch (error) {
+        res.status(500).send({ mes: "Internal Server Error" })
+    }
+}
+
+
+module.exports = { createTask, getAllTask, getTaskById }
