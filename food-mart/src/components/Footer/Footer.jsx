@@ -141,8 +141,8 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="border-t text-center py-4 text-sm text-gray-500">
-        © 2023 Foodmart. All rights reserved.{" "}
-        <span className="block md:inline">
+        © 2025 Foodmart. All rights reserved.{" "}
+        {/* <span className="block md:inline">
           Free HTML Template by{" "}
           <a href="#" className="hover:text-[#F7A600] font-medium">
             TemplatesJungle
@@ -151,7 +151,7 @@ const Footer = () => {
           <a href="#" className="hover:text-[#F7A600] font-medium">
             ThemeWagon
           </a>
-        </span>
+        </span> */}
       </div>
     </footer>
   );
