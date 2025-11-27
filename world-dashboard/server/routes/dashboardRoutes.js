@@ -10,5 +10,8 @@ router.get("/countriesWithPopulationGreater", dahsboardController.countriesWithP
 router.get("/countriesWithPopulationless", dahsboardController.countriesWithPopulationless)
 
 
+router.get("/getByCountryName", dahsboardController.getByCountryName)
+
+
 
 module.exports = router

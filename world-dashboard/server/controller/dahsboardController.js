@@ -73,6 +73,20 @@ const countriesWithPopulationless = async (req, res) => {
 
     }
 
+}                                               
+
+//Get BY Country Name By Using req.query
+
+const getByCountryName = async (req, res) => {
+    try {
+        const { cname } = req.query;
+        const Searchquery = `SELECT Name, Population FROM country WHERE Name =? ;`
+        const [result] = await db.query(Searchquery, [cname])
+        res.status(200).send(result[0])
+    } catch (error) {
+        res.status(500).send({ msg: "Server Error" })
+
+    }
 }
 
 
@@ -84,5 +98,6 @@ module.exports = {
     avgPopulationInContry,
     totalPopulationByContinent,
     countriesWithPopulationGreater,
-    countriesWithPopulationless
+    countriesWithPopulationless,
+    getByCountryName
 }
