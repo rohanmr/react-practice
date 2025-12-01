@@ -52,7 +52,7 @@ const totalPopulationByContinent = async (req, res) => {
 
 const countriesWithPopulationGreater = async (req, res) => {
     try {
-        const [result] = await db.query("SELECT Name, Population FROM country WHERE Population > 10000000 ORDER BY Population DESC;")
+        const [result] = await db.query("select Name, Continent,Region,Population,Capital from country where Population >= 1000000 order by Population desc  ;")
         res.status(200).send(result)
 
     } catch (error) {

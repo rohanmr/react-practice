@@ -52,7 +52,7 @@ const DonutChart = () => {
       <CardContent className="flex-1 pb-0">
         <ChartContainer
           config={chartConfig}
-          className="mx-auto aspect-square max-h-[250px] lg:w-[620px]"
+          className="mx-auto aspect-square max-h-[250px] lg:w-[320px]"
         >
           <ResponsiveContainer width="100%" height={280}>
             <PieChart>

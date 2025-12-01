@@ -39,7 +39,7 @@ export function ChartAreaInteractive() {
   }));
 
   return (
-    <Card>
+    <Card className="w-auto">
       <CardHeader>
         <CardTitle>Top 10 Countries by Population</CardTitle>
         <CardDescription>Based on latest available data</CardDescription>
