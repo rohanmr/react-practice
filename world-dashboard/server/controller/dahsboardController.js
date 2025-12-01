@@ -4,7 +4,7 @@ const db = require('../config/db')
 
 const totalPopulationCountries = async (req, res) => {
     try {
-        const [result] = await db.query("select sum(Population) as total_population ,COUNT(*) AS TotalCountries from country;")
+        const [result] = await db.query("select sum(Population) as totalPop ,COUNT(*) AS TotalCountries ,sum(SurfaceArea) as surfaceArea,AVG(Population) AS AvgPop from country;")
         res.status(200).send(result[0], result[1])
     } catch (error) {
         res.status(500).send({ msg: "Server Error" })
@@ -39,7 +39,7 @@ const avgPopulationInContry = async (req, res) => {
 
 const totalPopulationByContinent = async (req, res) => {
     try {
-        const [result] = await db.query("SELECT Continent, SUM(Population) AS TotalPopulation FROM country GROUP BY Continent;")
+        const [result] = await db.query("SELECT Continent, SUM(Population) AS TotalPopulation FROM country GROUP BY Continent limit 5;")
         res.status(200).send(result)
 
     } catch (error) {
@@ -73,7 +73,7 @@ const countriesWithPopulationless = async (req, res) => {
 
     }
 
-}                                               
+}
 
 //Get BY Country Name By Using req.query
 
