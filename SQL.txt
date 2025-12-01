@@ -1,0 +1,30 @@
+use world;
+
+select * from city;
+select * from country;
+select * from countrylanguage;
+
+select sum(Population) as totalPop ,COUNT(*) AS TotalCountries ,sum(SurfaceArea) as surfaceArea,AVG(Population) AS AvgPop from country;
+
+SELECT Name, Population FROM country ORDER BY Population DESC LIMIT 10;
+
+SELECT COUNT(*) AS TotalCountries FROM country;
+
+SELECT AVG(Population) AS AveragePopulation FROM country;
+
+SELECT Continent, SUM(Population) AS TotalPopulation FROM country GROUP BY Continent limit 5;
+
+SELECT Name, Population FROM country WHERE Population > 100000000 ORDER BY Population DESC; 
+
+SELECT Name, Population FROM country WHERE Population < 1000000 ORDER BY Population ASC;
+
+SELECT Name, Population FROM country WHERE Name = 'Andorra';
+
+select count(*) as total_countries,
+Sum(Population)as total_population,
+sum(SurfaceArea) as surface_area,
+Sum(Capital) as total_capitals,
+Region from country where Continent = 'Asia' group by Region order by Region asc ;
+
+
+select sum(SurfaceArea) as surface_area from country
