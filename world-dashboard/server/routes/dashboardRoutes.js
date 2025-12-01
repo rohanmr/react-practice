@@ -7,7 +7,7 @@ router.get("/topTenPopCountries", dahsboardController.topTenPopCountries)
 router.get("/avgPopulationInContry", dahsboardController.avgPopulationInContry)
 router.get("/totalPopulationByContinent", dahsboardController.totalPopulationByContinent)
 router.get("/countriesWithPopulationGreater", dahsboardController.countriesWithPopulationGreater)
-router.get("/countriesWithPopulationless", dahsboardController.countriesWithPopulationless)
+// router.get("/countriesWithPopulationless", dahsboardController.countriesWithPopulationless)
 
 
 router.get("/getByCountryName", dahsboardController.getByCountryName)

@@ -63,17 +63,17 @@ const countriesWithPopulationGreater = async (req, res) => {
 
 // countries with a population less than 1000000
 
-const countriesWithPopulationless = async (req, res) => {
-    try {
-        const [result] = await db.query("SELECT Name, Population FROM country WHERE Population < 1000000 ORDER BY Population ASC;")
-        res.status(200).send(result)
+// const countriesWithPopulationless = async (req, res) => {
+//     try {
+//         const [result] = await db.query("SELECT Name, Population FROM country WHERE Population < 1000000 ORDER BY Population ASC;")
+//         res.status(200).send(result)
 
-    } catch (error) {
-        res.status(500).send({ msg: "Server Error" })
+//     } catch (error) {
+//         res.status(500).send({ msg: "Server Error" })
 
-    }
+//     }
 
-}
+// }
 
 //Get BY Country Name By Using req.query
 
@@ -98,6 +98,6 @@ module.exports = {
     avgPopulationInContry,
     totalPopulationByContinent,
     countriesWithPopulationGreater,
-    countriesWithPopulationless,
+    // countriesWithPopulationless,
     getByCountryName
 }
