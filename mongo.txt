@@ -1,0 +1,124 @@
+use task_management
+
+db.users.insertOne({
+  username: "john_doe",
+  password: "hashed_password_123",
+  createdAt: new Date()
+})
+
+
+task_management.mongodb.js
+
+
+Create & Use Database 
+use task_management;
+
+Create users Collection
+db.createCollection("users");
+
+Create tasks Collection 
+db.createCollection("tasks");
+Insert Users 
+db.users.insertMany([
+  {
+    username: "user1",
+    password: "password1",
+    createdAt: new Date()
+  },
+  {
+    username: "user2",
+    password: "password2",
+    createdAt: new Date()
+  }
+]);
+
+Read Users & Store ObjectIds 
+const user1 = db.users.findOne({ username: "user1" });
+const user2 = db.users.findOne({ username: "user2" });
+
+Insert Tasks 
+db.tasks.insertMany([
+  {
+    title: "Task 1",
+    description: "Description for task 1",
+    priority: "high",
+    status: "pending",
+    userId: user1._id,
+    createdAt: new Date()
+  },
+  {
+    title: "Task 2",
+    description: "Description for task 2",
+    priority: "medium",
+    status: "completed",
+    userId: user1._id,
+    createdAt: new Date()
+  },
+  {
+    title: "Task 3",
+    description: "Description for task 3",
+    priority: "low",
+    status: "pending",
+    userId: user2._id,
+    createdAt: new Date()
+  }
+]);
+
+CRUD OPERATIONS
+Create a New User
+db.users.insertOne({
+  username: "user3",
+  password: "password3",
+  createdAt: new Date()
+});
+
+Read All Users
+db.users.find();
+
+Read All Tasks
+db.tasks.find();
+
+Read Tasks by User
+db.tasks.find({ userId: user1._id });
+
+Update Task Status 
+db.tasks.updateOne(
+  { title: "Task 1" },
+  { $set: { status: "completed" } }
+);
+
+Update Task Priority
+db.tasks.updateOne(
+  { title: "Task 3" },
+  { $set: { priority: "high" } }
+);
+
+Delete a Task 
+db.tasks.deleteOne({ title: "Task 2" });
+
+Join Users & Tasks 
+db.tasks.aggregate([
+  {
+    $lookup: {
+      from: "users",
+      localField: "userId",
+      foreignField: "_id",
+      as: "user"
+    }
+  },
+  { $unwind: "$user" },
+  {
+    $project: {
+      title: 1,
+      description: 1,
+      priority: 1,
+      status: 1,
+      "user.username": 1
+    }
+  }
+]);
+
+OPTIONAL CLEANUP 
+ db.users.drop();
+ db.tasks.drop();
+db.dropDatabase();

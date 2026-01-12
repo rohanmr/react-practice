@@ -83,7 +83,7 @@ export function DataTable() {
 
           <div className="space-x-2">
             <Button
-              variant="outline"
+              variant="secondary"
               size="sm"
               className="cursor-pointer"
               disabled={currentPage === 1}
